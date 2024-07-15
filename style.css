@@ -1,0 +1,408 @@
+@font-face {
+  font-family: customFont;
+  src: url(./assests/fonts/font.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #f8f7f4;
+  font-family: customFont;
+}
+
+#main {
+  padding: 0 2vw;
+}
+
+#page1 {
+  height: 100%;
+  width: 100%;
+}
+
+#nav {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#nav-part1 {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#nav-part1 h4 {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+#nav img {
+  height: 40px;
+}
+#nav-part2 {
+  width: 28%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#nav-part2 button {
+  padding: 12px 18px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  background-color: black;
+  color: white;
+  margin: 0 10px;
+}
+
+#nav-part2 button:nth-child(1) {
+  background-color: #fff;
+  color: #000;
+}
+#hero-section {
+  height: calc(100% - 100px);
+  width: 100%;
+  padding-top: 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2.5vw;
+}
+
+#hero-section h3 {
+  background-color: #f5afea;
+  padding: 0.5vw;
+  border-radius: 20px;
+  font-size: 15px;
+}
+
+#hero-section h1 {
+  font-size: 5vw;
+  text-align: center;
+  font-weight: 400;
+}
+
+#hero-section h4 {
+  font-size: 1.5vw;
+  font-weight: 400;
+  text-align: center;
+}
+
+#hero-section button {
+  padding: 1vw 2vw;
+  border-radius: 50px;
+  font-size: 1vw;
+  font-weight: 600;
+  border: none;
+  background-color: black;
+  color: white;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: all ease-out 0.5s;
+}
+
+#hero-section button:hover {
+  border: 1px solid rgb(44, 44, 44);
+  background-color: #f8f7f4;
+  color: black;
+}
+
+#hero-bottom {
+  height: 40vh;
+  width: 100%;
+  /* background-color: #f2b80a; */
+  padding: 2vh;
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+#hero-bottom::-webkit-scrollbar {
+  display: none;
+}
+
+.elem {
+  display: inline-block;
+  height: 100%;
+  width: 250px;
+  border-radius: 20px;
+  /* background-color: blueviolet; */
+  /* border: 1px solid black; */
+  margin-right: 1vw;
+  overflow: hidden;
+  animation-name: mover;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.elem img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.elem video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+@keyframes mover {
+  from {
+    transform: translate(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+#page2 {
+  height: 100%;
+  width: 100%;
+  background-color: #f8f7f4;
+  position: relative;
+  padding: 3vw;
+}
+
+#page2 h1 {
+  text-align: center;
+  font-weight: 400;
+  font-size: 60px;
+  margin-bottom: 2.5vw;
+}
+.box {
+  height: 40vh;
+  width: 40vh;
+  background-color: red;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 1.5vw;
+  display: inline-block;
+  position: relative;
+}
+
+.box img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.box-bottom {
+  height: 40%;
+  width: 100%;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.63));
+  position: absolute;
+  bottom: -40%;
+  transition: all ease 0.5s;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.box-bottom h5 {
+  font-size: 18px;
+}
+.box:hover .box-bottom {
+  bottom: 0;
+}
+
+.box:hover {
+  box-shadow: 0px 2px 20px rgba(123, 123, 123, 0.498);
+}
+
+#page3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2vw;
+  width: 100%;
+  height: 60vh;
+  background-color: #ffda79;
+}
+
+#page3 h1 {
+  font-size: 6vh;
+  font-weight: 600;
+  margin: 2vw;
+}
+
+#page3 h5 {
+  font-size: 2.5vh;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 2vh;
+}
+
+#btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20%;
+  width: 100%;
+  margin: 2vh;
+}
+#btn button {
+  padding: 2vh 3vh;
+  color: white;
+  background-color: black;
+  font-size: 2.2vh;
+  margin: 1vh;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all ease 0.5s;
+  font-weight: 600;
+}
+
+#btn button:nth-child(2):hover {
+  background-color: black;
+  color: white;
+}
+#btn button:hover {
+  background-color: #f8f7f4;
+  color: #000;
+}
+
+#btn button:nth-child(2) {
+  background-color: #f8f7f4;
+  color: #000;
+}
+
+#page3 h4 {
+  font-size: 2.5vh;
+  margin: 3vbh;
+}
+
+#moving {
+  height: 40vh;
+  width: 100%;
+  /* background-color: #f2b80a; */
+  padding: 2vh;
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+#moving::-webkit-scrollbar {
+  display: none;
+}
+
+.elem-1 {
+  display: inline-block;
+  height: 100%;
+  width: 250px;
+  border-radius: 20px;
+  margin-right: 1vw;
+  overflow: hidden;
+  animation-name: mover;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  margin: 2vh;
+}
+
+.elem-1 img {
+  height: 80%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.elem-1 h3 {
+  margin: 1vh;
+  font-size: 2vh;
+  font-weight: 400;
+  text-align: center;
+}
+
+#footer {
+  height: 20vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 5vw;
+}
+
+#footer img {
+  /* align-self: center; */
+  cursor: pointer;
+  width: 15vh;
+}
+
+#footer-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6.5vh;
+  flex-wrap: wrap;
+  cursor: pointer;
+  font-size: 2.2vh;
+  
+}
+
+#footer-link h5{
+  cursor: pointer;
+  font-size: 2vh;
+}
+
+#footer-social {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3vh;
+}
+
+#footer-social a {
+  text-decoration: none;
+  color: black;
+}
+
+#footer-social i {
+  cursor: pointer;
+  font-size: 3vh;
+}
+
+
+#footer-nav {
+  width: 100%;
+  height: 5vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 6vw;
+}
+
+.footer-nav-part {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5vh;
+  flex-wrap: wrap;
+}
+
+.footer-nav-part h5 {
+  cursor: pointer;
+  font-weight: 400;
+}
